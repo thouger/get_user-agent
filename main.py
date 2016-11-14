@@ -4,7 +4,7 @@ from pymongo import MongoClient
 def get_agent():
     conn=MongoClient('127.0.0.1',27017)
     db=conn.user_agent
-    result=[i for i in db.col.find()]
+    result=(i for i in db.col.find())
     print(result)
 
 
